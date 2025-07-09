@@ -197,7 +197,7 @@ main img{
 }
 
 
-.offer{
+.offerdiv{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -212,6 +212,7 @@ main img{
     width: 40%;
     height: 100%; 
     margin-top: 20px;
+    margin-left: -5px;
 }
 
 .menu{
@@ -265,36 +266,179 @@ main img{
     margin-left: 20px;
     margin-right: 20px;
 }
-
-.first{
+.group{
+    position: relative;
+    margin-bottom: 40px;
 }
-
+.testimonials img{
+    opacity: 0.7;
+}
+.text{
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    z-index: 1;
+    width: 80%;
+    line-height: 1.5;
+}
 footer{
     text-align: center;
     background-color: #000000;
     color: #ffffff;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
 }
 
+/*Tablet*/
+@media screen and (min-width: 768px) {
+    h1{
+        font-size: 3rem;
+     }
+
+    h2{
+        font-size: 2.375rem;
+    }
+
+    h3{
+        font-size: 1.75rem;
+    }
+
+    h4{
+        font-size: 1rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+    .top p, .top h1{
+        width: 80%;
+    }
+    .top{
+        background-position: center;
+    }
+    .welcome h2{
+        width: calc(50% - 30px);
+    }
+    .welcomeimgs{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+    }
+    .welcomeone{
+        margin-left: 20px;
+    }
+    .welcomeimgs img{
+        width: calc(50% - 30px);
+        margin: 0; 
+        padding: 0;
+    }
+    .divformat{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 0px;
+    }
+    .divformat img{
+        flex-basis: calc(50%-0px);
+        height: auto;
+    }
+    
+    .offerdiv img{
+        height: auto;
+        width: 150px;
+    }
+    .offer {
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .offer div:nth-child(1){
+        grid-column: 1 / span 4;
+        margin-top: 50px;
+    }
+    .offer div:nth-child(2){
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 2;
+        margin-left: 40px;
+    }
+    .offer div:nth-child(3){
+        grid-column: 3 / span 2;
+        grid-row: 2 / span 2;
+        margin-bottom: 1rem;
+        margin-right: 40px;
+    }
+    .offer div:nth-child(4){
+        grid-column: 1 / span 4;
+        grid-row: 4 / span 2;
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+
+    .group{
+        width: 350px;
+        height: auto;
+    }
+
+    .testimonials{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin: 0px;
+        padding: 40px;
+        justify-items: center;
+    }
+    .testimonials .group:first-child{
+        margin-top: 100px;
+        width: 600px;
+        grid-column: 1 / span 3;
+        justify-self: left;
+    }
+    .testimonials .group:nth-child(2){
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+        margin-top: -200px;
+        margin-bottom: 200px;
+    }
+    .testimonials .group:nth-child(3){
+        grid-column: 3 / span 2;
+        grid-row: 2 / span 1;
+        margin-top: -200px;
+        margin-bottom: 200px;
+    }
+    .testimonials .group:nth-child(4){
+        grid-column: 1 / span 4;
+        grid-row: 3 / span 1;
+        justify-self: center;
+        margin-top: -100px;
+        margin-bottom: 100px;
+    }
+}
+
+/*Large screens*/
 @media screen and (min-width: 1100px) {
 
-  h1 {
+  h1{
     font-size: 3.875rem;
   }
 
-  h2 {
+  h2{
     font-size: 3rem;
   }
 
-  h3 {
+  h3{
     font-size: 2rem;
   }
 
-  h4 {
-    font-size: 1.5rem;
+  h4{
+    font-size: 1rem;
   }
 
-  p {
+  p{
     font-size: 1rem;
   }
 
@@ -317,4 +461,77 @@ footer{
     position: absolute;
     margin-top: -50px;
   }
+
+  .offer {
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .offer div:nth-child(1){
+        grid-column: 1 / span 4;
+        margin-top: 100px;
+    }
+    .offer div:nth-child(2){
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 2;
+        
+    }
+    .offer div:nth-child(3){
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 2;
+    }   
+    .offer div:nth-child(4){
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 2;
+        margin: 0px;
+        margin-right: 40px;
+    }
+
+    .menu{
+        flex-direction: row;
+    }
+    .menu div{
+        width: 100%;
+        height: auto;
+    }
+    .about{
+        flex-direction: row;
+        margin: 50px;
+    }
+
+    .group{
+        width: auto;
+        height: 500px;
+    }
+     .testimonials{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin: 0;
+    }
+    .testimonials .group:nth-child(2){
+        grid-row: 2 / span 1;
+        margin-left: 0%;
+        margin-right: 50%;
+        margin-top: -300px;
+    }
+    .testimonials .group:nth-child(3){
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: -300px;
+    }
+    .testimonials .group:nth-child(4){
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 1;
+        margin-left: 0%;
+        margin-top: -300px;
+    }
+    footer{
+        margin-top: -200px;
+    }
 }
