@@ -13,28 +13,28 @@
 
 <body>
     <ul class="skip-links">
-        <li><a href="nav">Skip to navigation</a></li>
-        <li><a href="main">Skip to main content</a></li>
+        <li><a href="#nav">Skip to navigation</a></li>
+        <li><a href="#main">Skip to main content</a></li>
     </ul>
     <div class="container">
         <header role="banner">            
             <div>
                 <img src="./images/my-coffee-shop-logo.svg" alt="Coffee House logo">
             </div>
-                <nav class="nav" aria-label="Main Navigation">
+                <nav class="nav" role="navigation" aria-label="Main Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
                     
-                    <label for="check" class="checkbtn">&#9776;</label>
+                    <label for="check" class="checkbtn" aria-label="Menu">&#9776;</label>
                     <input type="checkbox" id="check">
                     <ul class="navitems">
-                        <li><a href="#about">About us</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#locations">Locations</a></li>
+                        <li role="menuitem"><a href="#about">About us</a></li>
+                        <li role="menuitem"><a href="#menu">Menu</a></li>
+                        <li role="menuitem"><a href="#locations">Locations</a></li>
                     </ul>
                 </nav>
             
         </header>
         <main id="main" role="main">`
-            <section class="top">
+            <section class="top" role="banner">
                 <div class="topbg">
                 <h1>Experience coffee like never before</h1>
                 <p>We craft more than beverages; we curate memories, one flavorful moment at a time. Embrace the aroma and let every
@@ -43,7 +43,7 @@
                 </div>
             </section>
 
-            <section class="welcome">
+            <section class="welcome" aria-labelledby="welcome">
                 <h4>Welcome to My Coffee House</h4>
                 <h2>Experience a new way to taste coffee</h2>
                 <div class="welcomeimgs">
@@ -57,7 +57,7 @@
                 </div>
             </section>
 
-            <section class="offer">
+            <section class="offer" aria-labelledby="offers">
                 <div>
                 <h4>What we offer</h4>
                 <h2>Why visit us?</h2>
@@ -82,7 +82,7 @@
                 
             </section>
 
-            <section class="menu">
+            <section class="menu" aria-labelledby="menu-location">
                 <div>
                     <h4>Our Menu</h4>
                     <h2>Explore what we have to offer you</h2>
@@ -91,11 +91,11 @@
                 <div>
                     <h4>Locations</h4>
                     <h2>Find your nearest coffee shop</h2>
-                    <button>View locations</button>
+                    <button class="btn">View locations</button>
                 </div>
             </section>
 
-            <section class="about">
+            <section class="about" aria-labelledby="about">
                 <div>
                     <img src="./images/about-us.jpeg" alt="image of two employees">
                 </div>
@@ -113,7 +113,7 @@
                 </div>
             </section>
 
-            <section class="testimonials">
+            <section class="testimonials" aria-labelledby="testimonials">
                 <div class="group">
                 <h4>Testimonials</h4>
                 <h2>What our customers say about us</h2>
